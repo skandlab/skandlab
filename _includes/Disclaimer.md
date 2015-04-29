@@ -1,0 +1,1 @@
+**Disclaimer:** skandlab.org is a personal web site and is not an official statement of *http://a-star.edu.sg/gis*, *A\*STAR*, or *Genome Institute of Singapore (GIS)*. The opinions expressed and the information presented on this site are therefore not necessarily those of of *http://a-star.edu.sg/gis*, *A\*STAR*, or *Genome Institute of Singapore (GIS)*.

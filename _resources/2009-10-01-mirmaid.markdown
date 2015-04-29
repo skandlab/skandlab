@@ -1,0 +1,13 @@
+---
+layout: default
+modal-id: mirmaid
+date: 2009-11-01
+img: mirmaid.png
+alt: image-alt
+project-date: November 2009
+title: A unified web-service for miRNA data
+link: <a class="txt" href="http://www.mirmaid.org">www.mirmaid.org</a>
+reference: <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/20074352">BMC Bioinformatics (2009)</a>
+category: Web-service, Non-coding
+description: <a class="txt" href="http://www.mirmaid.org">miRMaid</a> is a unified <a class="txt" href="http://en.wikipedia.org/wiki/Representational_state_transfer">RESTful</a> web service framework for microRNA data resources (<a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/20074352">Jacobsen et al., BMC Bioinformatics (2009)</a>). The web service allows both users and computer programs to retrieve information in a uniform way. To get data for the mature miRNA hsa-miR-21-5p, the user would access the web page <a class="txt" href="http://current.mirmaid.org/matures/hsa-miR-21-5p">current.mirmaid.org/matures/hsa-miR-21-5p</a> whereas the computer program would access the XML document <a class="txt" href="http://current.mirmaid.org/matures/hsa-miR-21-5p.xml">current.mirmaid.org/matures/hsa-miR-21-5p.xml</a>. The service was also designed with the intent to allow closer intgegration of external and otherwise isolated miRNA data resources, as miRMaid allows external resources to be integrated as data plugins (see <a class="txt" href="http://plugins.mirmaid.org">plugins.mirmaid.org</a> for an example).
+---

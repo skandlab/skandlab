@@ -1,0 +1,60 @@
+    <!-- Footer -->
+    <footer id="footer" class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4" style="text-align: left">
+                        <h3>{{ site.footer.location }}</h3>
+                        
+                            {% for adress in site.address %}
+                                {{ adress.line }} <br>
+		                    {% endfor %}
+                        
+                    </div>
+
+                    <div class="footer-col col-md-4">
+                      <br>
+                      <ul class="list-inline">
+                        <li>
+                        <img class="img-location" src="img/biopolis.jpg" alt=""></p>
+                        </li>
+                        <li>
+                        <img class="img-location" src="img/gis6.png" alt="">
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="footer-col col-md-4">
+                        <h3>{{ site.footer.social }}</h3>
+                        <ul class="list-inline">
+                            {% for network in site.social %}
+                            <li>
+                                <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
+                            </li>
+		                    {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                <br><br>    
+                      <strong>Disclaimer:</strong> skandlab.org is a personal web site and is not an official statement of <em>http://a-star.edu.sg/gis</em>, <em>A*STAR</em>, or <em>Genome Institute of Singapore (GIS)</em>. The opinions expressed and the information presented on this site are therefore not necessarily those of of <em>http://a-star.edu.sg/gis</em>, <em>A*STAR</em>, or <em>Genome Institute of Singapore (GIS)</em>.
+                    
+                  </div>
+                </div>
+                <br><br>
+                <div style="float: right">Copyright &copy; {{ site.footer.copyright }} 20{{ site.time | date: '%y' }}</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>

@@ -1,0 +1,45 @@
+# Site settings
+title: Skandlab
+email: andersmbj@gmail.com
+url: https://example.github.io
+description: "We are a computational biology team working on cancer genomics."
+
+collections:
+- highlights
+- resources
+
+# Contact form: comment the line below if you want to stick with the default PHP contact form
+contact: static
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: aaa # 18bc9c #80B3FF
+  secondary: 444 # 2c3e50 #FD6E8A
+  secondary-dark: 222 # 233140 #A2122F
+
+# Footer settings
+footer:
+  copyright: Anders Jacobsen Skanderup
+  location: Locate us
+  social: Connect
+  credits: Credits
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: http://twitter.com/anders_js
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: Genome Institute of Singapore (GIS)
+  - line: <a href="https://goo.gl/maps/zDfK3">60 Biopolis St, 138672 Singapore</a>
+  - line: <b>Office</b> 3rd Floor (3R9)
+  - line: <b>E-mail</b> skanderupamj [at] gis.a-star.edu.sg
+  - line: <b>Phone</b> +65 68088326
+
+# Credits content
+credits: 'Created using <a href="http://startbootstrap.com">Freelance theme</a>.'
+
+# Build settings
+markdown: kramdown
+permalink: pretty
