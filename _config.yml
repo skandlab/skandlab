@@ -1,8 +1,8 @@
 # Site settings
-title: Skandlab
+title: SkandLAB : Computational Biology & Cancer Genomics
 email: andersmbj@gmail.com
 url: https://example.github.io
-description: "We are a computational biology team working on cancer genomics."
+description: "A research group working on computational biology, cancer genomics, Big Data, and precision medicine at Genome Institute of Singapore."
 
 collections:
 - highlights
