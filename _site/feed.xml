@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Skandlab</title>
-    <description>We are a computational biology team working on cancer genomics.</description>
-    <link>https://example.github.io/</link>
+    <title>SkandLAB</title>
+    <description>Computational biology, cancer genomics, Big Data, and precision medicine at Genome Institute of Singapore.</description>
+    <link>https://www.skandlab.org/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 19 Sep 2016 11:40:49 +0100</pubDate>
-    <lastBuildDate>Mon, 19 Sep 2016 11:40:49 +0100</lastBuildDate>
+    <pubDate>Tue, 08 Nov 2016 16:24:26 +0800</pubDate>
+    <lastBuildDate>Tue, 08 Nov 2016 16:24:26 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
   </channel>
