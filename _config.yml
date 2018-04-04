@@ -3,6 +3,8 @@ title: "SkandLAB"
 url: https://www.skandlab.org
 description: "Computational biology, cancer genomics, Big Data, and precision medicine at Genome Institute of Singapore."
 
+plugins: ['jekyll-twitter-plugin']
+
 collections:
 - highlights
 - resources
