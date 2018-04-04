@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="row">
-                {% for post in site.highlights %}
+                {% for post in site.highlights reversed %}
                     <div class="col-sm-4 portfolio-item">
                         <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                             <div class="caption">
@@ -26,7 +26,7 @@
 
             <div class="row">
               <p>Methods & online resources</p>
-              {% for post in site.resources reversed %}
+              {% for post in site.resources %}
               <div class="col-sm-3 portfolio-item">
                 <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                   <div class="caption">
