@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>XXX</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Computational biology, cancer genomics, Big Data, and precision medicine at Genome Institute of Singapore.">
+    <link rel="canonical" href="http://localhost:4000/old-includes/02-mirnas/">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <meta name="google-site-verification" content="NQQLWnwMTolvbptKcgNdy3wnmCbAwPylurBT_L8Iufc" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+</head>
+
+    <body id="page-top" class="index">
+       <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">SkandLAB</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#research">Research</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#highlights">Highlights</a>
+                    </li>
+                   <li class="page-scroll">
+                        <a href="#news">News</a>
+                    </li>
+                     <li class="page-scroll">
+                        <a href="#people">people</a>
+                    </li>
+                   <li class="page-scroll">
+                        <a href="#publications">publications</a>
+                    </li>
+         
+                    <li class="page-scroll">
+                        <a href="#footer">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+        <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/profile_300px.png" alt="">
+                    <div class="intro-text">
+                      <span class="name">Skanderup lab</span>
+                      <p style="color:black">@ Genome Institute of Singapore</p>
+<!--                      <br><p style="color:#fff">Interested in Data Science and Precision Oncology? <a href="skandlab_jobs_Jan2020.pdf" class='txt'>Postdoc and Data Scientist positions open (February 2020)</a> -->
+                   </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     <!-- About
+Section -->
+    <section id="research">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Research</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                  <p style="text-align:justify">
+                    <b>Computational Precision Oncology</b><br>We develop and apply computational approaches to study cancer and how anti-cancer drugs work in patients. We develop algorithms for cancer genomics and study how machine learning approaches can enable biomarker discovery and data-driven clinical decision support. To accomplish this, we work closely with clinical teams in Singapore and abroad.
+                  </p>
+              </div>
+              <div class="col-lg-4">
+                <p style="text-align:justify">
+                  <b>Cancer Liquid Biopsies</b></br>Profiling of circulating tumor DNA (ctDNA) in blood offers a non-invasive approach to detect cancer and monitor disease progression. By profiling ctDNA over time, we study how tumors respond to treatments. We are also building machine learning models to aid detection of cancer mutations as well as detection and tracking of ctDNA levels in blood samples.
+              </p>
+              </div>
+              <div class="col-lg-4">
+                <p style="text-align:justify">
+                  <b>Tumor Systems Biology</b><br>Signaling between cancer and non-malignant cells of the tumor microenvironment is key to tumor progression. We are developing integrated experimental and computational methods to study tumors at a systems level. We use these approaches to discover biomarkers of immunotherapy and predict novel anti-cancer drug targets.
+                </p>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Portfolio Grid Section -->
+    <section class="success" id="highlights">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Research highlights</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal-2015_integrative" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/integrative_genomics.png" class="img-responsive" alt="image-alt">
+                        </a>
+                        <span style="font-size:90%">Integrative Cancer Genomics
+                    </div>
+                
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal-2014_nat_gen" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/cfdna.png" class="img-responsive" alt="image-alt">
+                        </a>
+                        <span style="font-size:90%">Cancer Liquid Biopsies
+                    </div>
+                
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal-2013_deconv" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/tumeric3.png" class="img-responsive" alt="image-alt">
+                        </a>
+                        <span style="font-size:90%">Biomarker and Target Discovery
+                    </div>
+                
+            </div>
+
+            <div class="row">
+              <p>Software & Resources</p>
+              
+              <div class="col-sm-3 portfolio-item">
+                <a href="#portfolioModal-OncoSG" class="portfolio-link" data-toggle="modal">
+                  <div class="caption">
+                    <div class="caption-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                  </div>
+                  <img src="img/portfolio/OncoSG.png" class="img-responsive" alt="image-alt">
+                </a>
+                <span style="font-size:80%">OncoSG - Cancer Genomics Data Portal<br><a class="txt" href="https://src.gisapps.org/OncoSG/">src.gisapps.org/OncoSG/</a></span>
+              </div>
+                
+              <div class="col-sm-3 portfolio-item">
+                <a href="#portfolioModal-camp" class="portfolio-link" data-toggle="modal">
+                  <div class="caption">
+                    <div class="caption-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                  </div>
+                  <img src="img/portfolio/camp.png" class="img-responsive" alt="image-alt">
+                </a>
+                <span style="font-size:80%">Cancer Metabolic Pathway Viewer<br><a class="txt" href="https://camp.genome.sg">CaMP</a></span>
+              </div>
+                
+              <div class="col-sm-3 portfolio-item">
+                <a href="#portfolioModal-cite" class="portfolio-link" data-toggle="modal">
+                  <div class="caption">
+                    <div class="caption-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                  </div>
+                  <img src="img/portfolio/cite.png" class="img-responsive" alt="image-alt">
+                </a>
+                <span style="font-size:80%">TME Crosstalk Viewer<br><a class="txt" href="https://cite.genome.sg">CITE</a></span>
+              </div>
+                
+              <div class="col-sm-3 portfolio-item">
+                <a href="#portfolioModal-mutspot" class="portfolio-link" data-toggle="modal">
+                  <div class="caption">
+                    <div class="caption-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                  </div>
+                  <img src="img/portfolio/mutspot.png" class="img-responsive" alt="image-alt">
+                </a>
+                <span style="font-size:80%">MutSpot<br><a class="txt" href="https://github.com/skandlab/MutSpot">MutSpot</a></span>
+              </div>
+                
+              <div class="col-sm-3 portfolio-item">
+                <a href="#portfolioModal-smurf" class="portfolio-link" data-toggle="modal">
+                  <div class="caption">
+                    <div class="caption-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                  </div>
+                  <img src="img/portfolio/smurf.png" class="img-responsive" alt="image-alt">
+                </a>
+                <span style="font-size:80%">Ensemble Cancer Variant Calling<br><a class="txt" href="https://github.com/skandlab/SMuRF/wiki/SMuRF-2.0">SMuRF</a></span>
+              </div>
+                
+              <div class="col-sm-3 portfolio-item">
+                <a href="#portfolioModal-cgdsr" class="portfolio-link" data-toggle="modal">
+                  <div class="caption">
+                    <div class="caption-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                  </div>
+                  <img src="img/portfolio/cgdsr.png" class="img-responsive" alt="image-alt">
+                </a>
+                <span style="font-size:80%">Access cancer genomics data in R<br><a class="txt" href="http://cran.r-project.org/web/packages/cgdsr/">CGDSR</a></span>
+              </div>
+                
+              <div class="col-sm-3 portfolio-item">
+                <a href="#portfolioModal-cancerminer" class="portfolio-link" data-toggle="modal">
+                  <div class="caption">
+                    <div class="caption-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                  </div>
+                  <img src="img/portfolio/cancerminer.png" class="img-responsive" alt="image-alt">
+                </a>
+                <span style="font-size:80%">Discover miRNA targets in cancer<br><a class="txt" href="http://skandlab.org/CancerMiner">CancerMiner</a></span>
+              </div>
+                
+              <div class="col-sm-3 portfolio-item">
+                <a href="#portfolioModal-cwords" class="portfolio-link" data-toggle="modal">
+                  <div class="caption">
+                    <div class="caption-content">
+                      <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                  </div>
+                  <img src="img/portfolio/cwords.png" class="img-responsive" alt="image-alt">
+                </a>
+                <span style="font-size:80%">cWords - Motif discovery from expression data<br><a class="txt" href="https://rubygems.org/gems/cwords">version 1.0</a>  <a class="txt" href="http://servers.binf.ku.dk/cwords/">version 2.0 (web)</a></span>
+              </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section id="news">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+
+        <h2>What's new</h2>
+        <hr class="star-primary">
+
+        <div class="col-lg-6"> 
+          <a class="twitter-timeline" data-width="500" data-height="500" data-theme="dark" href="https://twitter.com/anders_js/likes?ref_src=twsrc%5Etfw">Tweets Liked by @anders_js</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col-lg-6"> 
+          <a class="twitter-timeline" data-width="500" data-height="500" data-theme="dark" href="https://twitter.com/anders_js?ref_src=twsrc%5Etfw">Tweets by anders_js</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="people" class="success">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+
+        <h2>People</h2>
+        <hr class="star-light">
+
+        <div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/GuoAmandaYu.jpeg" alt="" align="left" style="margin-right:20px"><br>
+          <b>Yu <i>Amanda</i> Guo</b> (PostDoc)<br>
+           PhD in Bioinformatics and Genetics<br>Cornell University, USA.
+        </div>
+
+	<div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/MeiMeiChang.jpg" alt="" align="left" style="margin-right:20px"><br>
+          <b>Mei Mei Chang</b> (Bioinformatics Scientist)<br>
+          Bachelor in Biostatistics<br>National University of Singapore.
+        </div>
+
+        <div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/NehaRohatgi.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Neha Rohatgi</b> (PostDoc)<br>
+           PhD in systems biology<br>University of Iceland.
+        </div>
+
+        <div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/GuanhuaZhu.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Guanhua <i>Peter</i> Zhu</b> (PostDoc)<br>
+           PhD in computational biology<br>Nanyang Technological University, Singapore.
+        </div>
+
+        <div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/egor.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Egor Revkov</b> (Graduate student)<br>
+          Bachelor in Applied Mathematics and Physics<br>Moscow Institute of Physics and Technology (MIPT).
+        </div>
+	
+	<div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/probhonjon.jpeg" alt="" align="left" style="margin-right:20px"><br>
+          <b>Probhonjon Baruah</b> (Bioinformatics Scientist)<br>
+          Bachelor in Technology<br>Indian Institute of Technology Guwahati. 
+        </div>
+
+        <div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/KiranChari.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Kiran Krishnamachari</b> (Graduate student)<br>
+          Bachelor in Engineering<br>National University of Singapore.
+        </div>
+
+        <div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/weitai2.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Weitai Huang</b> (Postdoc)<br>
+          PhD in Bioinformatics and Biochemistry<br>National University of Singapore.</i>
+        </div>
+
+        <div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/sinem.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Sinem Kadioglu</b> (Graduate student)<br>
+          Bachelor in Molecular Biology and Genetics<br>Istanbul Kultur University, Turkey.
+        </div>
+
+	<div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/maryam.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Maryam Abedi</b> (Graduate student)<br>
+          Master in Human Genetics<br>Isfahan University of Medical Sciences, Iran.
+        </div>
+
+	<div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/ngakleng.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Ngak Leng Sim</b> (Bioinformatics Scientist)<br>
+          Bachelor in Computer Science<br>University of British Columbia, Vancouver, Canada.
+        </div>
+	
+	<div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/hanae.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Hanaé Carrié</b> (Graduate student)<br>
+          Master in Biomedical Sciences<br>Paris-Saclay University — CentraleSupélec, France.
+        </div>
+
+	<div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/jacob.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Jacob Alvarez</b> (Graduate student)<br>
+          Bachelor in Biomedical Sciences<br>National University of Singapore.
+        </div>
+
+	<div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/jiachi.jpg" alt="" align="left" style="margin-right:20px"><br>
+          <b>Jia Chi Yeo</b> (Postdoc)<br>
+          PhD in Biological Sciences<br>Nanyang Technological University, Singapore.
+        </div>
+
+	<div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/mengyuan.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Mengyuan Pang</b> (Bioinformatics Scientist)<br>
+          Master in Statistics<br>National University of Singapore.
+        </div>
+	
+	<div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/victor.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Victor Getty</b> (Bioinformatics Scientist)<br>
+          Bachelor in Physics and Mathematics<br>Nanyang Technological University, Singapore.
+        </div>
+
+	<div class="col-sm-6" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/simone.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Simone Rizzetto</b> (Postdoc)<br>
+          PhD in Medical Sciences<br>University of New South Wales, Australia.
+        </div>
+	
+        <div class="col-sm-6" align="left" style="margin-top:20px">
+           <img class="img-location" src="img/AndersSkanderup.jpg" alt="" align="left" style="margin-right:20px"><br>
+           <b>Anders Jacobsen Skanderup</b> (Principal Investigator)<br>
+           Adj. Asst. Professor, School of Computing, NUS; <br>
+	   Adj. Senior Scientist, National Cancer Center Singapore.
+        </div>
+
+	<div class="col-sm-12" align="left" style="margin-top:20px">
+          <img class="img-location" src="img/alumni.png" alt="" align="left" style="margin-right:20px"><br>
+          <b>Alumni</b><br>
+	  <u>Postdocs:</u> Khi Pin Chua, Pacific Biosciences; Chee Wee Ong, National Cancer Center Singapore; Umesh Ghoshdastider, ETH Zurich; Irfahan Kassam, NUS; Chee Wee Ong, National Cancer Center Singapore; <br>
+	  <u>PhDs:</u> Weitai Huang, Genome Institute of Singapore; Marjan Naeini, QIMR Brisbane; <br>
+	  <u>Staff scientists:</u> Kiran Krishnamachari, A*STAR; Jacob Alvarez, Genome Institute of Singapore; <br>
+          <u>Interns:</u> Jazzlyn Tan, Imperial College of London; Yuhan Ma, NTU; Yutong Cai, University of Cambridge; Julie Sulacroup, University of Bordeaux; Kayla Lee, University of British Columbia; Ahmed Abdelmoneim, University of British Columbia; Dylan Lu, University of British Columbia; Alexander Swift-Scott, University of British Columbia; Hamzeh Mesrian, University of Isfahan; Egor Revkov, Moscow Institute of Physics and Technology; Anuar Yeraliyev, University of British Columbia; Kayla Lee, University of British Columbia;  Satwik Bhattamishra, Birla ITS; Tanmay Kulshrestha, Birla ITS; Karthik MuthuKumar, Northeastern University, Boston; Tin Nguyen, University of Science, HCM City; Sundar Solai, Harvard University; Karthik Muthukumar; Probhonjon Baruah, Indian Institute of Technology, Guwahati;
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="publications">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Publications</h2>
+        <hr class="star-primary">
+        <p style="text-align:left; font-size:110%;">
+          Selected publications, see <a class="txt" href="https://scholar.google.com/citations?user=r06O54MAAAAJ&hl=en">Google Scholar</a> for a complete list of publications:
+          <ul style="text-align:left; font-size:110%; ">
+
+	  <li><b>Guo Y</b>, ..., <b>Skanderup A</b>, <a class="txt" href="https://www.nature.com/articles/s41525-020-0133-4">MutSpot: detection of non-coding mutation hotspots in cancer genomes</a>, <b>NPJ Genomic Medicine</b>, 2020.</li>
+          <li>Chen J, ..., <b>Skanderup A</b>, ..., Zhai W, <a class="txt" href="https://www.nature.com/articles/s41588-019-0569-6">Genomic landscape of lung adenocarcinoma in East Asians</a>, <b>Nature Genetics</b>, 2020.</li>
+          <li><b>Ghoshdastider U</b>, ..., <b>Skanderup A</b>, <a class="txt" href="https://www.biorxiv.org/content/10.1101/835512v1">Data-driven inference of crosstalk in the tumor microenvironment</a>, <b>BioRxiv</b>, 2019.</li>
+            <li>Ooi WF, , ..., <b>Skanderup A</b>, Tan P, <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/28408461">Integrated paired-end enhancer profiling and whole-genome sequencing reveals recurrent CCNE1 and IGF2 enhancer hijacking in primary gastric adenocarcinoma</a>, <b>Gut</b>, 2019.</li>
+          <li><b>Huang W</b>, ..., <b>Skanderup A</b>, <a class="txt" href="https://academic.oup.com/bioinformatics/article/35/17/3157/5288515">SMuRF: Portable and accurate ensemble-based somatic variant calling</a>, <b>Bioinformatics</b>, 2019.</li>
+          <li><b>Guo Y</b>, ..., <b>Skanderup A</b>, <a class="txt" href="https://doi.org/10.1038/s41467-018-03828-2">Mutation hotspots at CTCF binding sites coupled to chromosomal instability in gastrointestinal cancers</a>, <b>Nature Communcations</b>, 2018.</li>
+          <li>Tan D, ..., <b>Skanderup A</b>, DasGupta R, Iyer G, <a class="txt" href="https://www.nature.com/articles/nm.4401">Long noncoding RNA EGFR-AS1 mediates epidermal growth factor receptor addiction and modulates treatment response in squamous cell carcinoma</a>, <b>Nature Medicine</b>, 2017.</li>
+          <li>Hu S, Quin M, Zhang H, <b>Guo Y</b>, ..., <b>Skanderup A</b>, Yang JJ, <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/28408461">Whole-genome non-coding sequence analysis in T-cell acute lymphoblastic leukemia identifies oncogene enhancer mutations</a>, <b>Blood</b>, 2017.</li>
+          <li>Hakimi A, Tickoo S, <b>Jacobsen A</b>, et al., <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/25676555">TCEB1-mutated renal cell carcinoma: a distinct genomic and morphological subtype</a>, <b>Modern Pathology</b>, 2015.</li>
+          <li>Weinhold N, <b>Jacobsen A</b>, et al., <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/25261935">Genome-wide analysis of noncoding regulatory mutations in cancer.</a> <b>Nature Genetics</b>, 2014.</li>
+          <li><b>Jacobsen A</b>, et al., <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/24096364">Analysis of microRNA target interactions across diverse cancer types</a>, <b>Nature Structural & Molecular Biology</b>, 2013.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!-- Footer -->
+    <footer id="footer" class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4" style="text-align: left">
+                        <h3>Locate us</h3>
+                        
+                            
+                                Genome Institute of Singapore (GIS) <br>
+		                    
+                                <a href="https://goo.gl/maps/zDfK3">60 Biopolis St, 138672 Singapore</a> <br>
+		                    
+                                <b>Office</b> 3rd Floor (3R9) <br>
+		                    
+                                <b>E-mail</b> skanderupamj [at] gis.a-star.edu.sg <br>
+		                    
+                                <b>Phone</b> +65 68088326 <br>
+		                    
+                        
+                    </div>
+
+                    <div class="footer-col col-md-4">
+                      <br>
+                      <ul class="list-inline">
+                        <li>
+                        <img class="img-location" src="img/biopolis.jpg" alt=""></p>
+                        </li>
+                        <li>
+                        <img class="img-location" src="img/gis6.png" alt="">
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="footer-col col-md-4">
+                        <h3>Connect</h3>
+                        <ul class="list-inline">
+                            
+                            <li>
+                                <a href="http://twitter.com/anders_js" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+		                    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                <br><br>    
+                      <strong>Disclaimer:</strong> skandlab.org is a personal web site and is not an official statement of <em>http://a-star.edu.sg/gis</em>, <em>A*STAR</em>, or <em>Genome Institute of Singapore (GIS)</em>. The opinions expressed and the information presented on this site are therefore not necessarily those of of <em>http://a-star.edu.sg/gis</em>, <em>A*STAR</em>, or <em>Genome Institute of Singapore (GIS)</em>.
+                    
+                  </div>
+                </div>
+                <br><br>
+                <div style="float: left">Design based on <a href="https://github.com/jeromelachaud/freelancer-theme">Freelancer Bootstrap theme</a>.</div>
+                <div style="float: right">Copyright &copy; Anders Jacobsen Skanderup 2020</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+     <!-- Portfolio Modals -->
+ 
+    <div class="portfolio-modal modal fade" id="portfolioModal-2013_deconv" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Biomarker and Target Discovery</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/tumeric3.png" class="img-responsive img-centered" alt="image-alt">
+                            <p style="text-align:justify">The tumor microenvironment (TME) is a multi-faceted cellular environment that both constrains the evolving tumor and plays a pivotal role in tumor progression and therapeutic response. We are developing computational approaches to quantify and describe this environment. We are exploring fundamental propoerties of the TME, such as signaling between (<a class='txt' href='https://www.biorxiv.org/content/10.1101/835512v1.abstract'>Ghoshdastider et al.</a>) and metabolism of (<a class='txt' href='https://www.biorxiv.org/content/10.1101/835512v1.abstract'>Rohatgi et al. 2020</a> ) cancer and stromal cells inside tumors. We are using similar approaches to study biomarkers of drug response and potential novel therapeutic targets.</p>
+                            <ul class="list-inline item-details">
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-2014_nat_gen" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Cancer Liquid Biopsies</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cfdna.png" class="img-responsive img-centered" alt="image-alt">
+                            <p style="text-align:justify">In cancer patients, blood plasma can carry circulating tumor DNA (ctDNA) fragments originating from tumor cells, offering non-invasive access to somatic genetic alterations in tumors. The ctDNA profile of a cancer patient is clinically informative in at least two major ways. Firstly, the profile can provide information about specific actionable mutations that can guide therapy. Secondly, the profile can be used to infer tumor growth dynamics by estimating the amount of ctDNA in the blood. This latter information offers a promising non-invasive approach to track disease progression during clinical trials or therapy, offering a real-time tool to adjust therapy. In our lab, we are developing machine-learning based approaches to detect and quantify ctDNA in blood samples (<a class='txt' href='https://clincancerres.aacrjournals.org/content/26/12_supplement_1/44.abstract'>Guo et al. 2019</a>, Zhu et al. 2020). Secondly, we are using ctDNA profiles to study mechanisms of treatment resistance to chemotherapy and targeted therapy. We are also co-investigators in the new cancer liquid biopsy consortium in Singapore, CaLiBRe.</p>
+                            <ul class="list-inline item-details">
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-2015_integrative" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Integrative Cancer Genomics</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/integrative_genomics.png" class="img-responsive img-centered" alt="image-alt">
+                            <p style="text-align:justify">We use computational approaches to study cancer biology and precision oncology. We have participated in several large scale tumor characterization projects in The Cancer Genome Atlas (TCGA) (E.g. <a class="txt" href="https://www.nature.com/articles/nature12222">TCGA ccRCC</a>, <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/22588877">Cerami et al. 2012</a>, <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/23550210">Gao et al. 2013</a>). We have experience studying tumor whole genomes at scale (e.g. <a class='txt' href='http://www.ncbi.nlm.nih.gov/pubmed/25261935'>Weinhold, Jacobsen et al. 2014</a>), non-coding mutations (<a class='txt' href='https://doi.org/10.1038/s41467-018-03828-2'>Guo et al. 2018</a>), and non-coding RNAs in cancer (e.g. <a class='txt' href='http://www.ncbi.nlm.nih.gov/pubmed/24096364'>Jacobsen et al. 2013</a>). We collaborate with cancer research groups in Singapore and abroad (e.g. <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/25676555">Hakimi et al. 2015</a>, <a class="txt" href="https://www.nature.com/articles/ncomms13131">Chen et al. 2016</a>, <a class="txt" href='https://www.nature.com/articles/ncomms7967'>Montes et al. 2015</a>, <a class='txt' href='https://doi.org/10.1182/blood-2017-03-771162'>Hu et al. 2017</a>, <a class='txt' href='https://www.researchsquare.com/article/rs-57840/latest.pdf'>Montes et al. 2020</a>). In Singapore, we are co-investigators in the national lung cancer (e.g. <a class='txt' href='https://www.nature.com/articles/nm.4401.pdf'>Tan et al. 2017</a>, <a class='txt' href='https://www.nature.com/articles/s41588-019-0569-6'>Chen et al. 2020</a>) and gastrointestinal cancer (<a class='txt' href='https://gut.bmj.com/content/69/6/1039.abstract'>Ooi et al. 2020</a>, <a class='txt' href='https://www.jci.org/articles/view/126726'>Xing et al. 2020</a>) consortiums.</p>
+                            <ul class="list-inline item-details">
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-cwords" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>cWords - Motif discovery from expression data</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cwords.png" class="img-responsive img-centered" alt="image-alt">
+                            <p style="text-align:justify">cWords is an algorithm and software suite for analysis of regulatory sequence motifs in gene expression data. Originally developed for analysis of microRNA target sites in 3' UTRs (<a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/20508147">Jacobsen et al., Genome Research (2010)</a>), but can easily be adapted to other settings. The newest version features an improved and much more efficient statistical approach (<a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/23688306">Rasmussen, Jacobsen & Krogh, Silence (2013)</a>), and the software is now also available as a <a class="txt" href="http://servers.binf.ku.dk/cwords/">web service</a>.</p>
+                            <ul class="list-inline item-details">
+                                <li>URL: <strong> <a class="txt" href="https://rubygems.org/gems/cwords">version 1.0</a>  <a class="txt" href="http://servers.binf.ku.dk/cwords/">version 2.0 (web)</a> </strong>
+                                </li>
+                                <li>Themes: <strong>Web-service, Method, miRNA, Non-coding</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-cancerminer" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Discover miRNA targets in cancer</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cancerminer.png" class="img-responsive img-centered" alt="image-alt">
+                            <p style="text-align:justify"><a class="txt" href="http://www.cancerminer.org">CancerMiner</a> is a comprehensive resource for discovery and prioritization of functional miRNA-mRNA target interactions in human cancer using molecular datasets from The Cancer Genome Atlas. Candidate interactions can be queried for specific miRNAs or mRNAs, in individual or across multiple cancer types. Our approach uses molecular profiles of >3,000 tumors from 11 human cancer types in The Cancer Genome Atlas. Using this data, we systematically analyzed expression of miRNAs and mRNAs across cancer types to infer recurrent cancer-associated miRNA-target relationships (<a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/24096364">Jacobsen et al., Nature Structural & Molecular Biology (2013)</a>).</p>
+                            <ul class="list-inline item-details">
+                                <li>URL: <strong> <a class="txt" href="http://skandlab.org/CancerMiner">CancerMiner</a> </strong>
+                                </li>
+                                <li>Themes: <strong>Web-service, Cancer genomics, miRNA, Non-coding</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-cgdsr" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Access cancer genomics data in R</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cgdsr.png" class="img-responsive img-centered" alt="image-alt">
+                            <p style="text-align:justify"><a class="txt" href="http://cran.r-project.org/web/packages/cgdsr/">CGDSR</a> is an R-package to fetch and analyze data from The Cancer Genome Atlas and the <a class="txt" href="http://www.cbioportal.org">cBioPortal for Cancer Genomics</a>. These resources are further described here - <a class="txt" href="http://cran.r-project.org/web/packages/cgdsr/vignettes/cgdsr.pdf">Introduction to CGDSR</a>, <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/22588877">Cerami et al., Cancer Discovery (2012)</a>, <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/23550210">Gao et al., Science Signaling (2013)</a>.</p>
+                            <ul class="list-inline item-details">
+                                <li>URL: <strong> <a class="txt" href="http://cran.r-project.org/web/packages/cgdsr/">CGDSR</a> </strong>
+                                </li>
+                                <li>Themes: <strong>Web-service, R, Cancer Genomics</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-smurf" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Ensemble Cancer Variant Calling</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/smurf.png" class="img-responsive img-centered" alt="image-alt">
+                            <p style="text-align:justify">Somatic Mutation calling method using a Random Forest (SMuRF) integrates predictions and auxiliary features from multiple somatic mutation callers using a supervised machine learning approach. SMuRF is trained on community-curated matched tumor and normal whole genome sequencing data. SMuRF predicts both SNVs and indels with high accuracy in genome or exome-level sequencing data. Furthermore, the method is robust across multiple tested cancer types and predicts low allele frequency variants with high accuracy. In contrast to existing ensemble-based somatic mutation calling approaches, SMuRF works out-of-the-box and is orders of magnitudes faster. See <a class="txt" href="https://academic.oup.com/bioinformatics/article/35/17/3157/5288515">Huang et al. 2019</a>.</p>
+                            <ul class="list-inline item-details">
+                                <li>URL: <strong> <a class="txt" href="https://github.com/skandlab/SMuRF/wiki/SMuRF-2.0">SMuRF</a> </strong>
+                                </li>
+                                <li>Themes: <strong>Cancer Genomics, Mutations</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-mutspot" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>MutSpot</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/mutspot.png" class="img-responsive img-centered" alt="image-alt">
+                            <p style="text-align:justify">Recurrence and clustering of somatic mutations (hotspots) in cancer genomes may indicate positive selection and involvement in tumorigenesis. MutSpot performs genome-wide inference of mutation hotspots in non-coding and regulatory DNA of cancer genomes. MutSpot performs feature selection across hundreds of epigenetic and sequence features followed by estimation of position- and patient-specific background somatic mutation probabilities. MutSpot is user-friendly, works on a standard workstation, and scales to thousands of cancer genomes. See <a class="txt" href="https://www.nature.com/articles/s41525-020-0133-4">Guo et al. 2020</a>.</p>
+                            <ul class="list-inline item-details">
+                                <li>URL: <strong> <a class="txt" href="https://github.com/skandlab/MutSpot">MutSpot</a> </strong>
+                                </li>
+                                <li>Themes: <strong>Cancer Genomics, Mutations</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-cite" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>TME Crosstalk Viewer</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cite.png" class="img-responsive img-centered" alt="image-alt">
+                            <p style="text-align:justify">CITE (Crosstalk Interactions within Tumor microEnvironment) provides a database and dynamic visualization of ligand-receptor (LR) signaling interactions within the tumor microenvironment (TME). Crosstalk between ligands and receptors on cancer and stromal cells were estimated in the TME of 20 solid tumor types, based on cancer and stroma specific expression estimated using a tumor transcriptome deconvolution approach. See <a class="txt" href="https://www.biorxiv.org/content/10.1101/835512v1">Ghoshdastider et al. 2020</a>.</p>
+                            <ul class="list-inline item-details">
+                                <li>URL: <strong> <a class="txt" href="https://cite.genome.sg">CITE</a> </strong>
+                                </li>
+                                <li>Themes: <strong>Cancer Genomics, Tumor Microenvironment</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-camp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Cancer Metabolic Pathway Viewer</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/camp.png" class="img-responsive img-centered" alt="image-alt">
+                            <p style="text-align:justify">The Cancer Metabolic Pathway viewer (CaMP) contains metabolic activity profiles of cancer cells in vivo, non-malignant (stroma) cells within tumors, normal tissues and cancer cells in vitro. Metabolic profiles of cancer cells and stromal cells for 20 solid tumor types is estimated using a data deconvolution approach (Ghoshdastider, 2019) based on transcriptomes of 7865 tumors obtained from the cancer genome atlas (TCGA). Metabolic profiles of normal tissues is estimated using transcriptomes of 815 normal tissue samples from TCGA and genotype-tissue expression (GTEX). 620 cancer cell line from the cancer cell line encyclopedia (CCLE) transcriptomes are used to estimate the metabolic activity of cancer cells in vitro. The database contains KEGG maps of 55 metabolic pathways based on 1845 metabolic genes.</p>
+                            <ul class="list-inline item-details">
+                                <li>URL: <strong> <a class="txt" href="https://camp.genome.sg">CaMP</a> </strong>
+                                </li>
+                                <li>Themes: <strong>Cancer Genomics, Metabolomics, Tumor Microenvironment</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-OncoSG" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>OncoSG - Cancer Genomics Data Portal</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/OncoSG.png" class="img-responsive img-centered" alt="image-alt">
+                            <p style="text-align:justify">The field of cancer research is advancing at a rapid pace due to the declining cost of next-generation DNA sequencing. Massive DNA sequence data, complex molecular profiles, and rich clinical data are being generated from thousands of cancer patients worldwide. Several such projects are also underway in Singapore. However, considerable computational expertise and resources are required to integrate and mine these datasets. This presents a significant barrier for clinicians and use of this data to study cancer precision medicine. To meet this demand, we are developing the Singapore Oncology Data Portal (OncoSG). OncoSG will enable integration, visualization, analysis, and sharing of cancer genomics datasets in Singapore. This will speed-up translation of cancer genomics data into new biological insights and clinical applications. OncoSG currently stores data for more than 50,000 patient tumor samples, including more than 2,000 samples from Singapore.</p>
+                            <ul class="list-inline item-details">
+                                <li>URL: <strong> <a class="txt" href="https://src.gisapps.org/OncoSG/">src.gisapps.org/OncoSG/</a> </strong>
+                                </li>
+                                <li>Themes: <strong>Web-service, Cancer</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- jQuery Version 1.11.0 -->
+    <script src="/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/js/jquery.easing.min.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="/js/jqBootstrapValidation.js"></script>
+    
+    <script src="/js/contact_me_static.js"></script>
+    
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/freelancer.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61647406-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </body>
+</html>
