@@ -5,7 +5,7 @@ date: 2013-09-01
 img: cancerminer.png
 alt: image-alt
 project-date: September 2013
-title: Discover miRNA targets in cancer
+title: miRNA targets in cancer
 link: <a class="txt" href="http://skandlab.org/CancerMiner">CancerMiner</a>
 reference:  <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/24096364"> <b>Jacobsen et al., Nature Structural & Molecular Biology (2013)</a>
 category: Web-service, Cancer genomics, miRNA, Non-coding

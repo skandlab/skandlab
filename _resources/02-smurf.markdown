@@ -5,7 +5,7 @@ date: 2019-01-01
 img: smurf.png
 alt: image-alt
 project-date: April 2014
-title: Ensemble Cancer Variant Calling
+title: Cancer Mutation Calling
 link: <a class="txt" href="https://github.com/skandlab/SMuRF/wiki/SMuRF-2.0">SMuRF</a>
 reference:  <a class="txt" href="https://academic.oup.com/bioinformatics/article/35/17/3157/5288515">Huang et al. 2019</a>
 category: Cancer Genomics, Mutations

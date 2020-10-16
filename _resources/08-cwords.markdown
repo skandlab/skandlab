@@ -5,7 +5,7 @@ date: 2010-05-01
 img: cwords.png
 alt: image-alt
 project-date: May 2010
-title: cWords - Motif discovery from expression data
+title: cWords - motif discovery
 link: <a class="txt" href="https://rubygems.org/gems/cwords">version 1.0</a>  <a class="txt" href="http://servers.binf.ku.dk/cwords/">version 2.0 (web)</a>
 reference:  <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/20508147"> <b>Genome Research (2010)</a>
 category: Web-service, Method, miRNA, Non-coding

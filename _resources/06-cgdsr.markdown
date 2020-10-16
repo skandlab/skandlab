@@ -5,7 +5,7 @@ date: 2014-05-01
 img: cgdsr.png
 alt: image-alt
 project-date: May 2014
-title: Access cancer genomics data in R
+title: R + cBioPortal
 link: <a class="txt" href="http://cran.r-project.org/web/packages/cgdsr/">CGDSR</a>
 reference:  <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/20508147"> <b>Genome Research (2010)</a>
 category: Web-service, R, Cancer Genomics

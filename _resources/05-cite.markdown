@@ -5,7 +5,7 @@ date: 2019-03-01
 img: cite.png
 alt: image-alt
 project-date: April 2014
-title: TME Crosstalk Viewer
+title: TME Crosstalk
 link: <a class="txt" href="https://cite.genome.sg">CITE</a>
 reference:  <a class="txt" href="https://www.biorxiv.org/content/10.1101/835512v1">Ghoshdastider et al. 2020</a>
 category: Cancer Genomics, Tumor Microenvironment

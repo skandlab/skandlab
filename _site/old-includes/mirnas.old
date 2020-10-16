@@ -197,43 +197,43 @@ Section -->
                 <a href="#portfolioModal-OncoSG" class="portfolio-link" data-toggle="modal">
                   <div class="caption">
                     <div class="caption-content">
-                      <i class="fa fa-search-plus fa-3x"></i>
+                      <i class="fa fa-search-plus fa-2x"></i>
                     </div>
                   </div>
                   <img src="img/portfolio/OncoSG.png" class="img-responsive" alt="image-alt">
                 </a>
-                <span style="font-size:80%">OncoSG - Cancer Genomics Data Portal<br><a class="txt" href="https://src.gisapps.org/OncoSG/">src.gisapps.org/OncoSG/</a></span>
+                <span style="font-size:80%">Cancer Genomics Datahub<br><a class="txt" href="https://src.gisapps.org/OncoSG/">OncoSG</a></span>
               </div>
                 
               <div class="col-sm-3 portfolio-item">
                 <a href="#portfolioModal-camp" class="portfolio-link" data-toggle="modal">
                   <div class="caption">
                     <div class="caption-content">
-                      <i class="fa fa-search-plus fa-3x"></i>
+                      <i class="fa fa-search-plus fa-2x"></i>
                     </div>
                   </div>
                   <img src="img/portfolio/camp.png" class="img-responsive" alt="image-alt">
                 </a>
-                <span style="font-size:80%">Cancer Metabolic Pathway Viewer<br><a class="txt" href="https://camp.genome.sg">CaMP</a></span>
+                <span style="font-size:80%">TME Metabolic Pathways<br><a class="txt" href="https://camp.genome.sg">CaMP</a></span>
               </div>
                 
               <div class="col-sm-3 portfolio-item">
                 <a href="#portfolioModal-cite" class="portfolio-link" data-toggle="modal">
                   <div class="caption">
                     <div class="caption-content">
-                      <i class="fa fa-search-plus fa-3x"></i>
+                      <i class="fa fa-search-plus fa-2x"></i>
                     </div>
                   </div>
                   <img src="img/portfolio/cite.png" class="img-responsive" alt="image-alt">
                 </a>
-                <span style="font-size:80%">TME Crosstalk Viewer<br><a class="txt" href="https://cite.genome.sg">CITE</a></span>
+                <span style="font-size:80%">TME Crosstalk<br><a class="txt" href="https://cite.genome.sg">CITE</a></span>
               </div>
                 
               <div class="col-sm-3 portfolio-item">
                 <a href="#portfolioModal-mutspot" class="portfolio-link" data-toggle="modal">
                   <div class="caption">
                     <div class="caption-content">
-                      <i class="fa fa-search-plus fa-3x"></i>
+                      <i class="fa fa-search-plus fa-2x"></i>
                     </div>
                   </div>
                   <img src="img/portfolio/mutspot.png" class="img-responsive" alt="image-alt">
@@ -245,48 +245,48 @@ Section -->
                 <a href="#portfolioModal-smurf" class="portfolio-link" data-toggle="modal">
                   <div class="caption">
                     <div class="caption-content">
-                      <i class="fa fa-search-plus fa-3x"></i>
+                      <i class="fa fa-search-plus fa-2x"></i>
                     </div>
                   </div>
                   <img src="img/portfolio/smurf.png" class="img-responsive" alt="image-alt">
                 </a>
-                <span style="font-size:80%">Ensemble Cancer Variant Calling<br><a class="txt" href="https://github.com/skandlab/SMuRF/wiki/SMuRF-2.0">SMuRF</a></span>
+                <span style="font-size:80%">Cancer Mutation Calling<br><a class="txt" href="https://github.com/skandlab/SMuRF/wiki/SMuRF-2.0">SMuRF</a></span>
               </div>
                 
               <div class="col-sm-3 portfolio-item">
                 <a href="#portfolioModal-cgdsr" class="portfolio-link" data-toggle="modal">
                   <div class="caption">
                     <div class="caption-content">
-                      <i class="fa fa-search-plus fa-3x"></i>
+                      <i class="fa fa-search-plus fa-2x"></i>
                     </div>
                   </div>
                   <img src="img/portfolio/cgdsr.png" class="img-responsive" alt="image-alt">
                 </a>
-                <span style="font-size:80%">Access cancer genomics data in R<br><a class="txt" href="http://cran.r-project.org/web/packages/cgdsr/">CGDSR</a></span>
+                <span style="font-size:80%">R + cBioPortal<br><a class="txt" href="http://cran.r-project.org/web/packages/cgdsr/">CGDSR</a></span>
               </div>
                 
               <div class="col-sm-3 portfolio-item">
                 <a href="#portfolioModal-cancerminer" class="portfolio-link" data-toggle="modal">
                   <div class="caption">
                     <div class="caption-content">
-                      <i class="fa fa-search-plus fa-3x"></i>
+                      <i class="fa fa-search-plus fa-2x"></i>
                     </div>
                   </div>
                   <img src="img/portfolio/cancerminer.png" class="img-responsive" alt="image-alt">
                 </a>
-                <span style="font-size:80%">Discover miRNA targets in cancer<br><a class="txt" href="http://skandlab.org/CancerMiner">CancerMiner</a></span>
+                <span style="font-size:80%">miRNA targets in cancer<br><a class="txt" href="http://skandlab.org/CancerMiner">CancerMiner</a></span>
               </div>
                 
               <div class="col-sm-3 portfolio-item">
                 <a href="#portfolioModal-cwords" class="portfolio-link" data-toggle="modal">
                   <div class="caption">
                     <div class="caption-content">
-                      <i class="fa fa-search-plus fa-3x"></i>
+                      <i class="fa fa-search-plus fa-2x"></i>
                     </div>
                   </div>
                   <img src="img/portfolio/cwords.png" class="img-responsive" alt="image-alt">
                 </a>
-                <span style="font-size:80%">cWords - Motif discovery from expression data<br><a class="txt" href="https://rubygems.org/gems/cwords">version 1.0</a>  <a class="txt" href="http://servers.binf.ku.dk/cwords/">version 2.0 (web)</a></span>
+                <span style="font-size:80%">cWords - motif discovery<br><a class="txt" href="https://rubygems.org/gems/cwords">version 1.0</a>  <a class="txt" href="http://servers.binf.ku.dk/cwords/">version 2.0 (web)</a></span>
               </div>
                 
             </div>
@@ -639,7 +639,7 @@ Section -->
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>cWords - Motif discovery from expression data</h2>
+                            <h2>cWords - motif discovery</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/cwords.png" class="img-responsive img-centered" alt="image-alt">
                             <p style="text-align:justify">cWords is an algorithm and software suite for analysis of regulatory sequence motifs in gene expression data. Originally developed for analysis of microRNA target sites in 3' UTRs (<a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/20508147">Jacobsen et al., Genome Research (2010)</a>), but can easily be adapted to other settings. The newest version features an improved and much more efficient statistical approach (<a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/23688306">Rasmussen, Jacobsen & Krogh, Silence (2013)</a>), and the software is now also available as a <a class="txt" href="http://servers.binf.ku.dk/cwords/">web service</a>.</p>
@@ -669,7 +669,7 @@ Section -->
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Discover miRNA targets in cancer</h2>
+                            <h2>miRNA targets in cancer</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/cancerminer.png" class="img-responsive img-centered" alt="image-alt">
                             <p style="text-align:justify"><a class="txt" href="http://www.cancerminer.org">CancerMiner</a> is a comprehensive resource for discovery and prioritization of functional miRNA-mRNA target interactions in human cancer using molecular datasets from The Cancer Genome Atlas. Candidate interactions can be queried for specific miRNAs or mRNAs, in individual or across multiple cancer types. Our approach uses molecular profiles of >3,000 tumors from 11 human cancer types in The Cancer Genome Atlas. Using this data, we systematically analyzed expression of miRNAs and mRNAs across cancer types to infer recurrent cancer-associated miRNA-target relationships (<a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/24096364">Jacobsen et al., Nature Structural & Molecular Biology (2013)</a>).</p>
@@ -699,7 +699,7 @@ Section -->
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Access cancer genomics data in R</h2>
+                            <h2>R + cBioPortal</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/cgdsr.png" class="img-responsive img-centered" alt="image-alt">
                             <p style="text-align:justify"><a class="txt" href="http://cran.r-project.org/web/packages/cgdsr/">CGDSR</a> is an R-package to fetch and analyze data from The Cancer Genome Atlas and the <a class="txt" href="http://www.cbioportal.org">cBioPortal for Cancer Genomics</a>. These resources are further described here - <a class="txt" href="http://cran.r-project.org/web/packages/cgdsr/vignettes/cgdsr.pdf">Introduction to CGDSR</a>, <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/22588877">Cerami et al., Cancer Discovery (2012)</a>, <a class="txt" href="http://www.ncbi.nlm.nih.gov/pubmed/23550210">Gao et al., Science Signaling (2013)</a>.</p>
@@ -729,7 +729,7 @@ Section -->
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Ensemble Cancer Variant Calling</h2>
+                            <h2>Cancer Mutation Calling</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/smurf.png" class="img-responsive img-centered" alt="image-alt">
                             <p style="text-align:justify">Somatic Mutation calling method using a Random Forest (SMuRF) integrates predictions and auxiliary features from multiple somatic mutation callers using a supervised machine learning approach. SMuRF is trained on community-curated matched tumor and normal whole genome sequencing data. SMuRF predicts both SNVs and indels with high accuracy in genome or exome-level sequencing data. Furthermore, the method is robust across multiple tested cancer types and predicts low allele frequency variants with high accuracy. In contrast to existing ensemble-based somatic mutation calling approaches, SMuRF works out-of-the-box and is orders of magnitudes faster. See <a class="txt" href="https://academic.oup.com/bioinformatics/article/35/17/3157/5288515">Huang et al. 2019</a>.</p>
@@ -789,7 +789,7 @@ Section -->
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>TME Crosstalk Viewer</h2>
+                            <h2>TME Crosstalk</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/cite.png" class="img-responsive img-centered" alt="image-alt">
                             <p style="text-align:justify">CITE (Crosstalk Interactions within Tumor microEnvironment) provides a database and dynamic visualization of ligand-receptor (LR) signaling interactions within the tumor microenvironment (TME). Crosstalk between ligands and receptors on cancer and stromal cells were estimated in the TME of 20 solid tumor types, based on cancer and stroma specific expression estimated using a tumor transcriptome deconvolution approach. See <a class="txt" href="https://www.biorxiv.org/content/10.1101/835512v1">Ghoshdastider et al. 2020</a>.</p>
@@ -819,7 +819,7 @@ Section -->
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Cancer Metabolic Pathway Viewer</h2>
+                            <h2>TME Metabolic Pathways</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/camp.png" class="img-responsive img-centered" alt="image-alt">
                             <p style="text-align:justify">The Cancer Metabolic Pathway viewer (CaMP) contains metabolic activity profiles of cancer cells in vivo, non-malignant (stroma) cells within tumors, normal tissues and cancer cells in vitro. Metabolic profiles of cancer cells and stromal cells for 20 solid tumor types is estimated using a data deconvolution approach (Ghoshdastider, 2019) based on transcriptomes of 7865 tumors obtained from the cancer genome atlas (TCGA). Metabolic profiles of normal tissues is estimated using transcriptomes of 815 normal tissue samples from TCGA and genotype-tissue expression (GTEX). 620 cancer cell line from the cancer cell line encyclopedia (CCLE) transcriptomes are used to estimate the metabolic activity of cancer cells in vitro. The database contains KEGG maps of 55 metabolic pathways based on 1845 metabolic genes.</p>
@@ -849,14 +849,14 @@ Section -->
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>OncoSG - Cancer Genomics Data Portal</h2>
+                            <h2>Cancer Genomics Datahub</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/OncoSG.png" class="img-responsive img-centered" alt="image-alt">
                             <p style="text-align:justify">The field of cancer research is advancing at a rapid pace due to the declining cost of next-generation DNA sequencing. Massive DNA sequence data, complex molecular profiles, and rich clinical data are being generated from thousands of cancer patients worldwide. Several such projects are also underway in Singapore. However, considerable computational expertise and resources are required to integrate and mine these datasets. This presents a significant barrier for clinicians and use of this data to study cancer precision medicine. To meet this demand, we are developing the Singapore Oncology Data Portal (OncoSG). OncoSG will enable integration, visualization, analysis, and sharing of cancer genomics datasets in Singapore. This will speed-up translation of cancer genomics data into new biological insights and clinical applications. OncoSG currently stores data for more than 50,000 patient tumor samples, including more than 2,000 samples from Singapore.</p>
                             <ul class="list-inline item-details">
-                                <li>URL: <strong> <a class="txt" href="https://src.gisapps.org/OncoSG/">src.gisapps.org/OncoSG/</a> </strong>
+                                <li>URL: <strong> <a class="txt" href="https://src.gisapps.org/OncoSG/">OncoSG</a> </strong>
                                 </li>
-                                <li>Themes: <strong>Web-service, Cancer</a></strong>
+                                <li>Themes: <strong>Cancer Genomics, Database</a></strong>
                                 </li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>

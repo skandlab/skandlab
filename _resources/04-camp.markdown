@@ -5,7 +5,7 @@ date: 2019-04-01
 img: camp.png
 alt: image-alt
 project-date: April 2014
-title: Cancer Metabolic Pathway Viewer
+title: TME Metabolic Pathways
 link: <a class="txt" href="https://camp.genome.sg">CaMP</a>
 reference:  <a class="txt" href="https://camp.genome.sg">xxx</a>
 category: Cancer Genomics, Metabolomics, Tumor Microenvironment
