@@ -2,7 +2,7 @@
 layout: default
 modal-id: OncoSG
 date: 2022-04-03
-img: OncoSG.png
+img: OncoSG2.png
 alt: image-alt
 project-date: April 2018
 title: Cancer Genomics Datahub
