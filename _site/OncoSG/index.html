@@ -1,3 +1,720 @@
-<head> 
-    <meta http-equiv="refresh" content="0; URL=https://bioinfo.asia/oncosg_public/" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OncoSG Study Explorer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 300;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border: 1px solid rgba(255,255,255,0.2);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+            position: relative;
+        }
+
+        .tissue-category {
+            margin: 30px 0 20px 0;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2d3748;
+            padding: 15px 0;
+            border-bottom: 3px solid #e2e8f0;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tissue-category::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+        .sample-count {
+            color: #718096;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+        .cancer-type {
+            margin: 20px 0 15px 20px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #4a5568;
+            padding: 10px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .cancer-type::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .subtype-section {
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+
+        .subtype-header {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #718096;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .study-option {
+            margin: 8px 0 8px 60px;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            padding: 16px 20px;
+            background: rgba(255,255,255,0.5);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .study-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+            border-color: rgba(102, 126, 234, 0.3);
+            background: rgba(255,255,255,0.8);
+        }
+
+        .study-info {
+            flex: 1;
+        }
+
+        .study-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #4a5568;
+            margin-bottom: 4px;
+        }
+
+        .screenshot-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .screenshot-link:hover {
+            background: rgba(102, 126, 234, 0.1);
+            color: #5a67d8;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #718096;
+            font-size: 1.2rem;
+            background: rgba(255,255,255,0.3);
+            border-radius: 16px;
+            margin: 20px 0;
+        }
+
+        .no-results-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal-content {
+            position: relative;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            margin: 5% auto;
+            padding: 40px;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            animation: modalSlideIn 0.4s ease-out;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+        }
+
+        .close {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .close:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .modal-image {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border: 3px solid rgba(255,255,255,0.8);
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e2e8f0;
+            border-radius: 50%;
+            border-top-color: #667eea;
+            animation: spin 1s ease-in-out infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .submit-btn {
+            display: none;
+        }
+
+        #image-container {
+            margin-top: 50px;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .result-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+        }
+
+        .result-section h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .result-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border: 3px solid rgba(255,255,255,0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .result-section img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tissue-category {
+                font-size: 1.2rem;
+            }
+
+            .study-option {
+                padding: 12px 15px;
+                margin-left: 40px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+                padding: 20px;
+                max-height: 70vh;
+            }
+
+            .modal-title {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #5a67d8, #6b46c1);
+        }
+    </style>
 </head>
+<body>
+    <div class="container">
+        <div class="header" style="display: flex; flex-direction: column; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 40px;">
+                <img src="https://raw.githubusercontent.com/skandlab/OncoSG/main/src/oncosg_icon.png"
+                    alt="OncoSG Icon"
+                    style="max-height: 200px;">
+                <h1>OncoSG Study Explorer</h1>
+            </div>
+            <p class="subtitle">Select Studies for Visualization & Analysis</p>
+        </div>
+
+
+        <div class="form-container">
+            <form id="studyForm">
+                <!-- Dynamic content will be inserted here -->
+            </form>
+            <div id="noResults" class="no-results hidden">
+                <div class="no-results-icon">🔬</div>
+                <p><strong>No studies match your current filters</strong></p>
+                <p>Try adjusting your filter criteria to see more results</p>
+            </div>
+        </div>
+
+        <div id="image-container"></div>
+
+        <!-- Modal -->
+        <div id="studyModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modalTitle">Study Results</h2>
+                    <button class="close" id="closeModal">&times;</button>
+                </div>
+                <div id="modalBody">
+                    <div class="loading-spinner"></div>
+                    <p style="text-align: center; margin-top: 10px; color: #666;">Loading study visualization...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadTSV(url) {
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = url.split('/').pop();
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+        const studiesData = {
+  "Esophagus/Stomach": {
+    "Esophagogastric Adenocarcinoma": {
+      "Stomach Adenocarcinoma": [
+        {
+          "study": "Gastric Cancer (GIS, 2018)",
+          "filename": "Gastric_Cancer_GIS_2018_",
+          "samples": "187 patients, 187 samples",
+          "download_url": "https://drive.google.com/file/d/1kLasFfYRQfqi4-7ga5UE2tm8sxFSs0Py/view?usp=sharing",
+          "paper_text": "Yu et al., Nature Comm, 2018",
+          "paper_url": "https://www.nature.com/articles/s41467-018-03828-2"
+        }
+      ]
+    }
+  },
+  "Liver": {
+    "Hepatocellular Carcinoma": {
+      "No Subtype": [
+        {
+          "study": "Hepatocellular Carcinoma (GIS, 2021)",
+          "filename": "Hepatocellular_Carcinoma_GIS_2021_",
+          "samples": "67 patients, 331 samples",
+          "download_url": "https://drive.google.com/file/d/1iFDiaG0T5M2meEg8ejgE53Hp-bmDsLN2/view?usp=sharing",
+          "paper_text": "Zhai et al., NSR, 2021",
+          "paper_url": "https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwab192/6414014"
+        },
+        {
+          "study": "Hepatocellular Carcinoma (GIS, 2024)",
+          "filename": "Hepatocellular_Carcinoma_GIS_2024_",
+          "samples": "123 patients, 608 samples",
+          "download_url": "https://drive.google.com/file/d/1Bob6FJmwDDyoQ-UqBV2E4jvvsnOqxiyD/view?usp=sharing",
+          "paper_text": "Chen et al., Journal of Hepatology, 2024",
+          "paper_url": "https://www.journal-of-hepatology.eu/article/S0168-8278(24)00352-0/fulltext"
+        }
+      ]
+    }
+  },
+  "Lung": {
+    "Non-Small Cell Lung Cancer": {
+      "No Subtype": [
+        {
+          "study": "Lung Adenocarcinoma EGFR TKI resistance (NCCS/GIS, 2021)",
+          "filename": "Lung_Adenocarcinoma_EGFR_TKI_resistance_NCCS_GIS_2021_",
+          "samples": "59 patients, 59 samples",
+          "download_url": "https://drive.google.com/file/d/1_fQk131VT7TJgYk112ah6EX9SaQyEniF/view?usp=sharing",
+          "paper_text": "Chua et al., Clin Cancer Res, 2021",
+          "paper_url": "https://aacrjournals.org/clincancerres/article/27/21/5939/671726/Integrative-Profiling-of-T790M-Negative-EGFR"
+        }
+      ],
+      "Lung Adenocarcinoma": [
+        {
+          "study": "Lung Adenocarcinoma (NCCS/GIS, 2020)",
+          "filename": "Lung_Adenocarcinoma_NCCS_GIS_2020_",
+          "samples": "305 patients, 305 samples",
+          "download_url": "https://drive.google.com/file/d/193yige_ZFzce8_lmwOqIjTDVbQnZXfZj/view?usp=sharing",
+          "paper_text": "Chen et al., Nat Genet, 2020",
+          "paper_url": "https://www.nature.com/articles/s41588-019-0569-6"
+        }
+      ]
+    }
+  }
+};
+        const urls = {'Gastric_Cancer_GIS_2018.png': 'GIS003_clinical_data.tsv', 'Hepatocellular_Carcinoma_GIS_2021.png': 'GIS041_clinical_data.tsv', 'Lung_Adenocarcinoma_EGFR_TKI_resistance_NCCS_GIS_2021.png': 'GIS023_clinical_data.tsv','Hepatocellular_Carcinoma_GIS_2024.png': 'GIS096_clinical_data.tsv', 'Lung_Adenocarcinoma_NCCS_GIS_2020.png':'GIS031_clinical_data.tsv'}
+        const form = document.getElementById("studyForm");
+        const noResults = document.getElementById("noResults");
+    
+        function sanitizeStudyName(studyName) {
+            let cleaned = "";
+            for (let i = 0; i < studyName.length; i++) {
+                const c = studyName[i];
+                if (/[a-zA-Z0-9 _-]/.test(c)) {
+                    cleaned += c;
+                } else {
+                    cleaned += '_';
+                }
+            }
+            cleaned = cleaned.trim().replace(/ /g, '_').replace(/_+/g, '_');
+            return cleaned.endsWith('_') ? cleaned.slice(0, -1) : cleaned;
+        }
+    
+    
+    
+    
+        function buildStudyList() {
+            form.innerHTML = '';
+            for (const tissue in studiesData) {
+                const tissueSection = document.createElement("div");
+                tissueSection.className = "tissue-category";
+                tissueSection.textContent = tissue;
+                tissueSection.dataset.tissue = tissue;
+                form.appendChild(tissueSection);
+    
+                for (const cancerType in studiesData[tissue]) {
+                    const cancerSection = document.createElement("div");
+                    cancerSection.className = "cancer-type";
+                    cancerSection.textContent = cancerType;
+                    cancerSection.dataset.tissue = tissue;
+                    cancerSection.dataset.cancerType = cancerType;
+                    form.appendChild(cancerSection);
+    
+                    for (const subtype in studiesData[tissue][cancerType]) {
+                        const subtypeSection = document.createElement("div");
+                        subtypeSection.className = "subtype-section";
+                        subtypeSection.dataset.tissue = tissue;
+                        subtypeSection.dataset.cancerType = cancerType;
+                        subtypeSection.dataset.subtype = subtype;
+    
+                        if (subtype !== "No Subtype") {
+                            const subtypeHeader = document.createElement("div");
+                            subtypeHeader.className = "subtype-header";
+                            subtypeHeader.textContent = subtype;
+                            subtypeSection.appendChild(subtypeHeader);
+                        }
+    
+                        studiesData[tissue][cancerType][subtype].forEach((studyData, index) => {
+                            const div = document.createElement("div");
+                            div.className = "study-option";
+                            div.dataset.tissue = tissue;
+                            div.dataset.cancerType = cancerType;
+                            div.dataset.subtype = subtype;
+    
+                            const displayName = studyData.study;
+                            const downloadLink = studyData.download_url;
+
+                            div.innerHTML = `
+                                <div class="study-info">
+                                    <div class="study-title">${displayName}</div>
+                                    <div class='sample-count'>${studyData.samples}</div>
+                                    <div class="sample-count">
+                                    <a href="${studyData.paper_url}" target="_blank" style="color: #667eea; text-decoration: underline;">
+                                        ${studyData.paper_text}
+                                    </a>
+                                    </div>
+                                    ${downloadLink ? `
+                                    <div style="margin-top: 8px;">
+                                        <a href="${downloadLink}" target="_blank" style="
+                                            font-size: 0.95rem;
+                                            color: #667eea;
+                                            text-decoration: underline;
+                                        ">⬇ Download Full Dataset</a>
+                                    </div>` : ''}
+                                </div>
+                                <a href="#" class="screenshot-link" data-study="${displayName}">[screenshot]</a>
+                            `;
+                            subtypeSection.appendChild(div);
+                        });
+    
+                        form.appendChild(subtypeSection);
+                    }
+                }
+            }
+        }
+    
+        
+        const modal = document.getElementById("studyModal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalBody = document.getElementById("modalBody");
+        const closeModal = document.getElementById("closeModal");
+    
+        function showModal(studyName) {
+    modalTitle.textContent = studyName;
+    modalBody.innerHTML = `
+        <div class="loading-spinner"></div>
+        <p style="text-align: center; margin-top: 10px; color: #666;">Loading study visualization...</p>
+    `;
+    modal.style.display = "block";
+
+    const safeName = sanitizeStudyName(studyName);
+    const imagePath = `screenshots_public/${safeName}.png`;
+    const downloadFile = `${safeName}.png`;
+    const downloadUrl = urls[downloadFile];
+    console.log(downloadFile);
+    console.log(downloadUrl);
+    const img = new Image();
+    const IMAGE_BASE = "https://raw.githubusercontent.com/skandlab/OncoSG/main/screenshots_public/";
+    const srcPath = `${IMAGE_BASE}${safeName}.png`;
+    img.onload = () => {
+        modalBody.innerHTML = `
+            <img src="${srcPath}" alt="Study Visualization" class="modal-image">
+        `;
+    };
+    img.onerror = () => {
+        modalBody.innerHTML = `
+            <div style="text-align: center; padding: 40px; color: #666;">
+                <p style="font-size: 1.2rem; margin-bottom: 10px;">⚠️ Image not found</p>
+                <p>Could not load visualization for: <strong>${studyName}</strong></p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">Expected path: <code>${imagePath}</code></p>
+            </div>
+        `;
+    };
+    img.src = srcPath;
+}
+
+    
+        function hideModal() {
+            modal.style.display = "none";
+        }
+    
+        buildStudyList();
+    
+
+        closeModal.addEventListener("click", hideModal);
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) hideModal();
+        });
+    
+        // Updated event listener for screenshot links
+        form.addEventListener("click", (e) => {
+            if (e.target.classList.contains("screenshot-link")) {
+                e.preventDefault();
+                const studyName = e.target.getAttribute("data-study");
+                showModal(studyName);
+            }
+        });
+    
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && modal.style.display === "block") {
+                hideModal();
+            }
+        });
+        // let hoverTimeout = null;
+        // let hoverCloseTimeout = null;
+
+        // // Open modal on hover (with delay to allow for proper rendering)
+        // document.addEventListener("mouseover", (e) => {
+        //     const link = e.target.closest(".screenshot-link");
+        //     if (link && link.dataset.study) {
+        //         clearTimeout(hoverTimeout);
+        //         hoverTimeout = setTimeout(() => {
+        //             showModal(link.dataset.study);
+        //         }, 150);  // Short delay allows DOM to catch up
+        //     }
+        // });
+
+        // // Close modal if cursor leaves modal content
+        // document.addEventListener("mousemove", (e) => {
+        //     const modalEl = document.getElementById("studyModal");
+        //     const contentEl = modalEl.querySelector(".modal-content");
+
+        //     if (modalEl.style.display === "block") {
+        //         if (!contentEl.contains(e.target)) {
+        //             if (!hoverCloseTimeout) {
+        //                 hoverCloseTimeout = setTimeout(() => {
+        //                     hideModal();
+        //                     hoverCloseTimeout = null;
+        //                 }, 200);  // Prevent flickering
+        //             }
+        //         } else {
+        //             clearTimeout(hoverCloseTimeout);
+        //             hoverCloseTimeout = null;
+        //         }
+        //     }
+        // });
+
+    </script>
